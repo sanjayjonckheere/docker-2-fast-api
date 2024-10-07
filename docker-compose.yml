@@ -1,0 +1,25 @@
+version: '3'
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./db:/app/db # Mount sqlite db
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"  # Map the Redis port if needed
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80" # Map to 80 in production cases
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro  # Mount Nginx configuration
+      - ./static:/www/data:ro # Mount static files
+    depends_on:
+      - python-app

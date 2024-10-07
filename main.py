@@ -37,7 +37,7 @@ async def create_user(name: str):
             session.add(user)
             session.commit()
 
-        redis_client.set(name, name)
+        await redis_client.set(name, name)
 
         return {"message": f"User {name} created"}
     except SQLAlchemyError:
@@ -56,7 +56,7 @@ async def get_user(name: str):
             if user is None:
                 raise HTTPException(status_code=404, detail="User not found")
 
-        redis_client.set(name, name)
+        await redis_client.set(name, name)
 
         return user
     except SQLAlchemyError:
