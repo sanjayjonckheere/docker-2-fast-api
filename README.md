@@ -1,6 +1,8 @@
 ## **PROJECT OVERVIEW**
-This project is a web app built using **FastAPI** with a **SQLite database** and **Redis for caching**. It allows users to interact with a **RESTful API for creating and retrieving users**. The project is **containerised using Docker**, making it easy to deploy and run in any environment.
+---
 
+#### This project is a web app built using **FastAPI** with a **SQLite database** and **Redis for caching**. It allows users to interact with a **RESTful API for creating and retrieving users**. The project is **containerised using Docker**, making it easy to deploy and run in any environment.
+---
 **FEATURES** 
 1. **FastAPI**: High-performance API framework to handle HTTP requests.
 2. **SQLite**: Lightweight database to store user data.
@@ -8,7 +10,7 @@ This project is a web app built using **FastAPI** with a **SQLite database** and
 4. **Docker**: Simplified deployment using Docker containers.
 5. **Nginx**: Used as a reverse proxy to handle requests.
 6. **PyCharm Professional**: Full development setup with Docker integration.
-
+---
 
 **PROJECT STRUCTURE**
        
@@ -20,18 +22,18 @@ This project is a web app built using **FastAPI** with a **SQLite database** and
        ├── nginx.conf              # Nginx configuration file
        ├── requirements.txt        # Project dependencies
        └── test_main.http          # HTTP request tests for the API
-
+---
 
 **PREREQUISITES** 
 1. **Docker**: Ensure you have Docker and Docker Compose installed.
 2. **Python**: Python 3.9 or higher.
 3. **PyCharm Professional**: For an integrated development environment with Docker support.
-
+---
 
 **CREATE A NEW PROJECT IN PYCHARM**
-Select the FASTapi template, which contains a pre-configured project structure and essential files to kickstart the development of FastAPI apps.  Good for small projects. For larger projects, check Cookiecutter template.
-
+1. **PYCHARM workflow:** Select the FASTapi template, which contains a pre-configured project structure and essential files to kickstart the development of FastAPI apps.  Good for small projects. For larger projects, check Cookiecutter template.
 The app will be running on your local machine on local host, port 8000.
+---
 
 **CONTAINERISATION** 
 1. **Create requirements.txt and specify all dependencies** 
@@ -58,6 +60,6 @@ The app will be running on your local machine on local host, port 8000.
         1. Set the port bindings + add
         2. --publish 8000 which is exposed by the fast api
         3. Go to modify options add a host port
-        4. Add the host port 8000, This will map the 8000 port on the container to the 8000 port on my local machine 
-      
+        4. Add the host port 8000, This will map the 8000 port on the container to the 8000 port on your local machine. 
+ ---     
            
