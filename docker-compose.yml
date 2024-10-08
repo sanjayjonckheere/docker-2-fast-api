@@ -11,8 +11,8 @@ services:
 
   redis:
     image: redis:latest
-    ports:
-      - "6379:6379"  # Map the Redis port if needed
+ #   ports:
+ #     - "6379:6379"  # Map the Redis port if needed
 
   nginx:
     image: nginx:latest
